@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Coming Soon v5.0.9 (https://startbootstrap.com/theme/coming-soon)
- * Copyright 2013-2020 Start Bootstrap
+ * Copyright 2013-2021 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-coming-soon/blob/master/LICENSE)
  */
 
@@ -12,7 +12,7 @@ body {
   height: 100%;
   min-height: 35rem;
   position: relative;
-  font-family: 'Source Sans Pro';
+  font-family: fieldwork, sans-serif;
   font-weight: 300;
 }
 
@@ -22,8 +22,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Merriweather';
+  font-family: fieldwork, sans-serif;
   font-weight: 700;
+}
+
+em {
+  font-family: ff-market-web, sans-serif;
+  font-weight: 300;
 }
 
 video {
@@ -40,12 +45,23 @@ video {
 
 @media (pointer: coarse) and (hover: none) {
   body {
-    background: url("../img/bg-mobile-fallback.jpg") #002E66 no-repeat center center scroll;
+    background: url("../img/ada_background_full.jpg") #663399 no-repeat center center scroll;
     background-size: cover;
   }
   body video {
     display: none;
   }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: url("../img/ada_background_full.jpg") #663399 no-repeat center center scroll;
+  background-size: cover;
 }
 
 .overlay {
@@ -54,30 +70,49 @@ video {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #cd9557;
-  opacity: 0.7;
-  z-index: 1;
+  background: url("../img/ada_iphone_full_cut.png") no-repeat center center scroll;
+  background-size: cover;
+  z-index: 3;
 }
 
-.masthead {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 3rem;
-  z-index: 2;
-}
-
-.masthead .masthead-bg {
+.masthead-bg {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  width: 100%;
+  width: 35rem;
   min-height: 35rem;
   height: 100%;
-  background-color: rgba(0, 46, 102, 0.8);
+  background-color: rgba(102, 51, 153, 0.9);
   transform: skewY(4deg);
   transform-origin: bottom right;
+  z-index: 2;
+}
+
+.masthead {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  padding-bottom: 3rem;
+  z-index: 3;
+}
+
+.masthead .my-5 {
+  margin-top: 6rem !important;
+  margin-bottom: 6rem !important;
+}
+
+.masthead .masthead-content .logo {
+  height: 59px;
+}
+
+.masthead .masthead-content .slogan {
+  font-size: 27pt;
+}
+
+.masthead .masthead-content .slogan em {
+  font-size: 20pt;
 }
 
 .masthead .masthead-content h1 {
@@ -86,6 +121,7 @@ video {
 
 .masthead .masthead-content p {
   font-size: 1.2rem;
+  padding-left: 0;
 }
 
 .masthead .masthead-content p strong {
@@ -107,26 +143,31 @@ video {
 }
 
 @media (min-width: 768px) {
-  .masthead {
-    height: 100%;
-    min-height: 0;
-    width: 40.5rem;
-    padding-bottom: 0;
-  }
-  .masthead .masthead-bg {
+  .masthead-bg {
     min-height: 0;
     transform: skewX(-8deg);
     transform-origin: top right;
   }
+  .masthead {
+    height: 100%;
+    min-height: 0;
+    padding-bottom: 0;
+  }
   .masthead .masthead-content {
     padding-left: 3rem;
-    padding-right: 10rem;
+  }
+  .masthead .masthead-content .slogan {
+    font-size: 27pt;
+  }
+  .masthead .masthead-content .slogan em {
+    font-size: 20pt;
   }
   .masthead .masthead-content h1 {
     font-size: 3.5rem;
   }
   .masthead .masthead-content p {
     font-size: 1.3rem;
+    padding-left: 0;
   }
 }
 
@@ -152,7 +193,7 @@ video {
 .social-icons ul > li > a {
   display: block;
   color: white;
-  background-color: rgba(0, 46, 102, 0.8);
+  background-color: rgba(102, 51, 153, 0.8);
   border-radius: 100%;
   font-size: 2rem;
   line-height: 4rem;
@@ -189,18 +230,18 @@ video {
     width: 4rem;
   }
   .social-icons ul > li > a:hover {
-    background-color: #002E66;
+    background-color: #663399;
   }
 }
 
 .btn-secondary {
-  background-color: #cd9557;
-  border-color: #cd9557;
+  background-color: #D5C6E2;
+  border-color: #D5C6E2;
 }
 
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
-  background-color: #ba7c37 !important;
-  border-color: #ba7c37 !important;
+  background-color: #bca4d1 !important;
+  border-color: #bca4d1 !important;
 }
 
 .input {
